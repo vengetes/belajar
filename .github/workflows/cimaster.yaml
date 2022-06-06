@@ -1,0 +1,21 @@
+name: Belajar CI/CD
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  belajar:
+    name: Test CI/CD Deploy from master
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v2
+
+      - name: Perintah Linux
+        run: |
+          git status
+          ls -lah
+          id
+          echo "Hery is here"
